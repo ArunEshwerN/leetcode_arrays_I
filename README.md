@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0031-next-permutation](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0031-next-permutation) |
 | [0053-maximum-subarray](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0053-maximum-subarray) |
 | [0073-set-matrix-zeroes](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0073-set-matrix-zeroes) |
+| [0075-sort-colors](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0075-sort-colors) |
 | [0118-pascals-triangle](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0118-pascals-triangle) |
 # Hash Table
 |  |
@@ -26,7 +27,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0031-next-permutation](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0031-next-permutation) |
+| [0075-sort-colors](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0075-sort-colors) |
 # Divide and Conquer
 |  |
 | ------- |
 | [0053-maximum-subarray](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0053-maximum-subarray) |
+# Sorting
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/ArunEshwerN/leetcode_arrays_I/tree/master/0075-sort-colors) |
