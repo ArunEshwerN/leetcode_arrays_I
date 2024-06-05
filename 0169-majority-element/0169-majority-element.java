@@ -36,28 +36,58 @@ class Solution {
         // return temp;
 
         //Striver's almost inspired Brute Force
-        int count = 1;
-        int temp = 0;
+        // int count = 1;
+        // int temp = 0;
 
-        for (int i = 0; i<nums.length-1; i++){
-            for (int j = 1; j<nums.length; j++){
+        // for (int i = 0; i<nums.length-1; i++){
+        //     for (int j = 1; j<nums.length; j++){
                 
-                temp = nums[i];
+        //         temp = nums[i];
 
-                if (nums[j] == temp){
-                    count++;
-                }
+        //         if (nums[j] == temp){
+        //             count++;
+        //         }
 
+        //     }
+        //     if (count>(nums.length/2)){
+        //         break;
+        //     }
+        //     count = 1;
+        // }
+
+        // if (nums.length == 1){
+        //     temp = nums[0];
+        // }
+        // return temp;
+
+        //Striver Better Solution
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i< nums.length; i++){
+            int key = nums[i];
+            int freq = 0;
+            if (map.containsKey(key)){
+                freq = map.get(key);
+                map.put(key, freq+1);
             }
-            if (count>(nums.length/2)){
-                break;
+            else{
+                
+                map.put(key, freq+1);
+                
             }
-            count = 1;
+            
+        }
+        int temp = 0;
+        for (Map.Entry<Integer, Integer> entry: map.entrySet()){
+            int key = entry.getKey();
+            int value = entry.getValue();
+            if (map.get(key)>((nums.length)/2)){
+                temp = key;
+            }
         }
 
-        if (nums.length == 1){
-            temp = nums[0];
-        }
         return temp;
+
+        
     }
 }
