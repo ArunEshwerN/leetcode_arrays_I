@@ -61,32 +61,112 @@ class Solution {
         // return temp;
 
         //Striver Better Solution
-        HashMap<Integer, Integer> map = new HashMap<>();
+        // HashMap<Integer, Integer> map = new HashMap<>();
+
+        // for (int i = 0; i< nums.length; i++){
+        //     int key = nums[i];
+        //     int freq = 0;
+        //     if (map.containsKey(key)){
+        //         freq = map.get(key);
+        //         map.put(key, freq+1);
+        //     }
+        //     else{
+                
+        //         map.put(key, freq+1);
+                
+        //     }
+            
+        // }
+        // int temp = 0;
+        // for (Map.Entry<Integer, Integer> entry: map.entrySet()){
+        //     int key = entry.getKey();
+        //     int value = entry.getValue();
+        //     if (map.get(key)>((nums.length)/2)){
+        //         temp = key;
+        //     }
+        // }
+
+        // return temp;
+
+        //Striver's Optimal - Moore's Voting Algo
+        //Own Try - Has Fallacies
+
+        // int el = 0;
+        // int count = 0;
+        // int index = 0;
+        // int i = 0;
+        // int j = 1;
+
+        // while(index<nums.length && j<nums.length){
+        //     el = nums[i];
+        //     count++;
+            
+        //     if (nums[j] == el){
+        //         count++;
+        //     }
+        //     j++;
+        //     else{
+        //         count--;
+        //     }
+
+        //     // if (nums[j] == el){
+        //     //     count++;
+        //     // }
+        //     // else{
+        //     //     count--;
+        //     // }
+        //     if (count == 0){
+        //         i++;
+        //     }
+        //     index++;
+
+        // }
+        // int count2 = 0;
+        // for (int i = 0; i<nums.length; i++){
+        //     if (nums[i] == el){
+        //         count2++;
+        //     }
+        // }
+
+        // if (count2>((nums.length)/2)){
+        //     return el;
+        // }
+
+        // return 0;
+
+        //Striver's Most Optimal
+        // Learnt 
+
+        int el = 0;
+        int count = 0;
 
         for (int i = 0; i< nums.length; i++){
-            int key = nums[i];
-            int freq = 0;
-            if (map.containsKey(key)){
-                freq = map.get(key);
-                map.put(key, freq+1);
+            if (count == 0){
+                el = nums[i];
+                count++;
             }
             else{
-                
-                map.put(key, freq+1);
-                
-            }
-            
-        }
-        int temp = 0;
-        for (Map.Entry<Integer, Integer> entry: map.entrySet()){
-            int key = entry.getKey();
-            int value = entry.getValue();
-            if (map.get(key)>((nums.length)/2)){
-                temp = key;
+                if (nums[i] == el){
+                    count++;
+                }
+                else{
+                    count--;
+                }
             }
         }
 
-        return temp;
+        int count2 = 0;
+        for (int i = 0; i<nums.length; i++){
+            if (nums[i] == el){
+                count2++;
+            }
+        }
+
+        if (count2>((nums.length)/2)){
+            return el;
+        }
+
+        return 0;
 
         
     }
