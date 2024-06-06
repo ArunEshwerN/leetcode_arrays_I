@@ -51,9 +51,9 @@ class Solution {
         for (Map.Entry<Integer, Integer> entry: map.entrySet()){
             int key = entry.getKey();
             int value = entry.getValue();
-            if (map.get(key)>((nums.length)/3)&&!al.contains(temp)){
-                
-                al.add(key);
+            if (map.get(key)>((nums.length)/3)&&!al.contains(key)){
+                temp = key;
+                al.add(temp);
             }
         }
 
